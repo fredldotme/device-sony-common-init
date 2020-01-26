@@ -160,6 +160,10 @@ int main(int argc, char** argv)
             system_exec(argv_ramdiskcpio);
         }
     }
+    else if (chargerBoot) {
+        const char* argv_charger[] = { "/charger", nullptr};
+        system_exec_inline(argv_charger);
+    }
     // Boot to Android
     else
     {
